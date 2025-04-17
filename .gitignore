@@ -73,6 +73,12 @@ crashlytics-build.properties
 [Aa]ssets/[Ss]treamingAssets/aa.meta
 [Aa]ssets/[Ss]treamingAssets/aa/*
 
+#############################
+########## Blender ##########
+#############################
+# remove backups to save space
+*.blend1
+*.blend2
 
 #############################
 #### React.js .gitignore ####
