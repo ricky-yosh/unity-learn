@@ -76,6 +76,7 @@ crashlytics-build.properties
 #############################
 ########## Blender ##########
 #############################
+*.blend
 # remove backups to save space
 *.blend1
 *.blend2
