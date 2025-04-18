@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { Unity, useUnityContext } from "react-unity-webgl";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const basePath = process.env.NODE_ENV === 'production' ? '/unity-learn' : '';
+
+  const { unityProvider, requestFullscreen } = useUnityContext({
+    loaderUrl: `${basePath}/games/Essentials Project/WebGL Builds/Build/WebGL Builds.loader.js`,
+    dataUrl: `${basePath}/games/Essentials Project/WebGL Builds/Build/WebGL Builds.data.br`,
+    frameworkUrl: `${basePath}/games/Essentials Project/WebGL Builds/Build/WebGL Builds.framework.js.br`,
+    codeUrl: `${basePath}/games/Essentials Project/WebGL Builds/Build/WebGL Builds.wasm.br`,
+  });
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <Unity 
+        unityProvider={unityProvider} 
+        style={{ width: "800px", height: "600px" }}
+      />
+      <button onClick={requestFullscreen}>Fullscreen</button>
+    </div>
+  );
 }
 
-export default App
+export default App;
