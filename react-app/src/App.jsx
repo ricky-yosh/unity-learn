@@ -1,25 +1,33 @@
-import React from "react";
-import { Unity, useUnityContext } from "react-unity-webgl";
+import React from 'react';
+import GameLibrary from './components/game-library/GameLibrary';
+import './App.css';
 
-function App() {
-  const basePath = process.env.NODE_ENV === 'production' ? '/unity-learn' : '';
-
-  const { unityProvider, requestFullscreen } = useUnityContext({
-    loaderUrl: `${basePath}/games/Essentials Project/WebGL Builds/Build/WebGL Builds.loader.js`,
-    dataUrl: `${basePath}/games/Essentials Project/WebGL Builds/Build/WebGL Builds.data.br`,
-    frameworkUrl: `${basePath}/games/Essentials Project/WebGL Builds/Build/WebGL Builds.framework.js.br`,
-    codeUrl: `${basePath}/games/Essentials Project/WebGL Builds/Build/WebGL Builds.wasm.br`,
-  });
-
+const App = () => {
   return (
-    <div>
-      <Unity 
-        unityProvider={unityProvider} 
-        style={{ width: "800px", height: "600px" }}
-      />
-      <button onClick={requestFullscreen}>Fullscreen</button>
+    <div className="app">
+      <header className="app-header">
+        <div className="logo">
+          <img src="/logo.png" alt="Site Logo" />
+        </div>
+        <nav className="main-nav">
+          <ul>
+            <li><a href="#" className="active">Games</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <main className="app-main">
+        <GameLibrary />
+      </main>
+      
+      <footer className="app-footer">
+        <p>&copy; {new Date().getFullYear()} Your Game Studio. All rights reserved.</p>
+        <p>Powered by React and Unity WebGL</p>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;
