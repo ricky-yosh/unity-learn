@@ -25,7 +25,7 @@ const UnityGamePlayer = ({
   const basePath = `${baseUrl}unity-builds`;
   
   // Build game-specific paths
-  const buildUrl = `${basePath}/${gameId}/Build`;
+  const buildUrl = `${basePath}/${gameId}/webgl-build`;
   const templateDataUrl = `${basePath}/${gameId}/TemplateData`;
   const streamingAssetsUrl = `${basePath}/${gameId}/StreamingAssets`;
 
