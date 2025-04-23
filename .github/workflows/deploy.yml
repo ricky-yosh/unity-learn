@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]  # Set this to your default branch
+  workflow_dispatch:    # Allow manual triggers
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies 📦
+        working-directory: ./react-app
+        run: npm ci
+        
+      - name: Build Project 🔧
+        working-directory: ./react-app
+        run: npm run build
+
+      - name: Create .nojekyll file 🚫
+        run: touch ./react-app/dist/.nojekyll
+        
+      # This action handles the GitHub Pages deployment
+      - name: Deploy to GitHub Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./react-app/dist     # The folder the action should deploy
+          clean: true                   # Automatically remove deleted files
+          clean-exclude: |              # Optional: files to preserve between deployments
+            .gitignore
+            .nojekyll
+          branch: gh-pages              # The branch the action should deploy to
