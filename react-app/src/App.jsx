@@ -3,11 +3,14 @@ import GameLibrary from './components/game-library/GameLibrary';
 import './App.css';
 
 const App = () => {
+  // Get the base URL from Vite environment
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  
   return (
     <div className="app">
       <header className="app-header">
         <div className="logo">
-          <img src="/logo.png" alt="Site Logo" />
+          <img src={`${baseUrl}logo.png`} alt="Site Logo" />
         </div>
         <nav className="main-nav">
           <ul>

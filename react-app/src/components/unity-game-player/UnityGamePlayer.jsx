@@ -18,8 +18,11 @@ const UnityGamePlayer = ({
   // Detect if user is on mobile
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   
+  // Get the base URL from Vite environment
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  
   // Base path for Unity builds
-  const basePath = '/unity-builds';
+  const basePath = `${baseUrl}unity-builds`;
   
   // Build game-specific paths
   const buildUrl = `${basePath}/${gameId}/Build`;
@@ -141,7 +144,7 @@ const UnityGamePlayer = ({
         unityInstance.Quit();
       }
     };
-  }, [gameId]); // Reload when gameId changes
+  }, [gameId, unityInstance, buildUrl]); // Reload when gameId or buildUrl changes
 
   // Add mobile meta tag if on mobile
   useEffect(() => {

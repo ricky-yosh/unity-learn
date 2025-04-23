@@ -8,25 +8,18 @@ const GAMES = [
     id: 'essentials-project',
     title: 'Essentials Project',
     description: 'A sample Unity project showcasing essential features.',
-    thumbnail: '/unity-builds/essentials-project/thumbnail.png',
+    // Using a relative path that will be prefixed with BASE_URL during build
+    thumbnail: 'unity-builds/essentials-project/thumbnail.png',
     width: 1280,
     height: 720
   },
   // Add more games as you create them
-  /*
-  {
-    id: 'another-game',
-    title: 'Another Game',
-    description: 'A different Unity WebGL game.',
-    thumbnail: '/games/another-game/thumbnail.jpg',
-    width: 1280,
-    height: 720
-  },
-  */
 ];
 
 const GameLibrary = () => {
   const [selectedGame, setSelectedGame] = useState(null);
+  // Get the base URL from Vite environment
+  const baseUrl = import.meta.env.BASE_URL || '/';
   
   // Show game selection screen
   const showGameSelection = () => {
@@ -79,10 +72,10 @@ const GameLibrary = () => {
           >
             <div className="game-thumbnail">
               <img 
-                src={game.thumbnail} 
+                src={`${baseUrl}${game.thumbnail}`} 
                 alt={game.title}
                 onError={(e) => {
-                  e.target.src = '/placeholder-image.png';
+                  e.target.src = `${baseUrl}placeholder-image.png`;
                 }}
               />
             </div>
