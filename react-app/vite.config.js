@@ -33,5 +33,7 @@ export default defineConfig({
     fs: {
       strict: false
     }
-  }
+  },
+  // Add base path for GitHub Pages deployment
+  base: '/unity-learn/'
 });
