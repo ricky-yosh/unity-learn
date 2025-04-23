@@ -10,7 +10,7 @@ const App = () => {
     <div className="app">
       <header className="app-header">
         <div className="logo">
-          <img src={`${baseUrl}logo.png`} alt="Site Logo" />
+          <img src={`${baseUrl}unity-full.svg`} alt="Site Logo" />
         </div>
         <nav className="main-nav">
           <ul>
