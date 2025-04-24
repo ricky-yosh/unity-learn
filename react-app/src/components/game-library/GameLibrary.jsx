@@ -35,6 +35,7 @@ const GameLibrary = () => {
   };
   
   // If a game is selected, display it
+  // Inside GameLibrary.jsx, modify the selectedGame section:
   if (selectedGame) {
     return (
       <div className="game-container">
@@ -45,7 +46,13 @@ const GameLibrary = () => {
           <h1>{selectedGame.title}</h1>
         </div>
         
-        <div className="unity-wrapper">
+        {/* Remove the unity-wrapper div and use a fixed size container */}
+        <div style={{ 
+          width: '100%', 
+          height: '600px', 
+          margin: '0 auto',
+          maxWidth: selectedGame.width + 'px'
+        }}>
           <UnityGamePlayer 
             gameId={selectedGame.id}
             gameTitle={selectedGame.title}

@@ -18,16 +18,13 @@ const UnityGamePlayer = ({
   // Detect if user is on mobile
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   
-  // Get the base URL from Vite environment
-  const baseUrl = import.meta.env.BASE_URL || '/';
-  
   // Base path for Unity builds
-  const basePath = `${baseUrl}unity-builds`;
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  const basePath = `${baseUrl}/unity-builds`;
   
   // Build game-specific paths
-  const buildUrl = `${basePath}/${gameId}/Build`;
+  const buildUrl = `${basePath}/${gameId}/webgl-build`;
   const templateDataUrl = `${basePath}/${gameId}/TemplateData`;
-  const streamingAssetsUrl = `${basePath}/${gameId}/StreamingAssets`;
 
   // Unity config matching the original HTML - now with proper .br extensions
   const config = {
@@ -35,7 +32,6 @@ const UnityGamePlayer = ({
     dataUrl: `${buildUrl}/WebGL Builds.data.br`,
     frameworkUrl: `${buildUrl}/WebGL Builds.framework.js.br`,
     codeUrl: `${buildUrl}/WebGL Builds.wasm.br`,
-    streamingAssetsUrl: streamingAssetsUrl,
     companyName: "RickyCorp",
     productName: gameTitle,
     productVersion: "0.1.0",
@@ -144,7 +140,7 @@ const UnityGamePlayer = ({
         unityInstance.Quit();
       }
     };
-  }, [gameId, unityInstance, buildUrl]); // Reload when gameId or buildUrl changes
+  }, [gameId]); // Reload when gameId changes
 
   // Add mobile meta tag if on mobile
   useEffect(() => {

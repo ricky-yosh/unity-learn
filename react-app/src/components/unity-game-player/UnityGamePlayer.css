@@ -133,3 +133,28 @@
   #unity-progress-bar-full {
     animation: pulse 2s infinite;
   }
+
+  /* Add this to your App.css file */
+.app-main {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Make sure game containers can expand to full size */
+#unity-container {
+  width: 100%;
+  height: 600px; /* Increase this value for larger display */
+  margin: 0 auto;
+}
+
+/* Ensure the canvas takes up proper space */
+#unity-canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Make sure the footer with fullscreen button is visible */
+#unity-footer {
+  display: flex !important;
+}
