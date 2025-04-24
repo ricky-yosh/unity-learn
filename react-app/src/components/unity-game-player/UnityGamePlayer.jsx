@@ -26,12 +26,12 @@ const UnityGamePlayer = ({
   const buildUrl = `${basePath}/${gameId}/webgl-build`;
   const templateDataUrl = `${basePath}/${gameId}/TemplateData`;
 
-  // Unity config matching the original HTML - now with proper .br extensions
+  // Unity config matching the original HTML - changed to use uncompressed files
   const config = {
     arguments: [],
-    dataUrl: `${buildUrl}/WebGL Builds.data.br`,
-    frameworkUrl: `${buildUrl}/WebGL Builds.framework.js.br`,
-    codeUrl: `${buildUrl}/WebGL Builds.wasm.br`,
+    dataUrl: `${buildUrl}/WebGL Builds.data`,
+    frameworkUrl: `${buildUrl}/WebGL Builds.framework.js`,
+    codeUrl: `${buildUrl}/WebGL Builds.wasm`,
     companyName: "RickyCorp",
     productName: gameTitle,
     productVersion: "0.1.0",
