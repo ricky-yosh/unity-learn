@@ -20,7 +20,7 @@ const UnityGamePlayer = ({
   
   // Base path for Unity builds
   const baseUrl = import.meta.env.BASE_URL || '/';
-  const basePath = `${baseUrl}/unity-builds`;
+  const basePath = `${baseUrl}unity-builds`;
   
   // Build game-specific paths
   const buildUrl = `${basePath}/${gameId}/webgl-build`;
