@@ -10,7 +10,18 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  display: flex; /* Add this to properly contain the image */
+  align-items: center; /* Vertically center the image */
+  justify-content: center; /* Horizontally center the image */
 }
+
+.logo img {
+  max-width: 100%; /* Prevent the image from overflowing */
+  max-height: 100%; /* Maintain aspect ratio */
+  width: auto; /* Allow width to adjust based on height */
+  height: auto; /* Allow height to adjust based on width */
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }

@@ -27,7 +27,6 @@ const UnityGamePlayer = ({
   // Build game-specific paths
   const buildUrl = `${basePath}/${gameId}/webgl-build`;
   const templateDataUrl = `${basePath}/${gameId}/TemplateData`;
-  const streamingAssetsUrl = `${basePath}/${gameId}/StreamingAssets`;
 
   // Unity config matching the original HTML - now with proper .br extensions
   const config = {
@@ -35,7 +34,6 @@ const UnityGamePlayer = ({
     dataUrl: `${buildUrl}/WebGL Builds.data.br`,
     frameworkUrl: `${buildUrl}/WebGL Builds.framework.js.br`,
     codeUrl: `${buildUrl}/WebGL Builds.wasm.br`,
-    streamingAssetsUrl: streamingAssetsUrl,
     companyName: "RickyCorp",
     productName: gameTitle,
     productVersion: "0.1.0",
