@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 0
+  m_CurrentQuality: 1
   m_QualitySettings:
   - serializedVersion: 4
     name: High Fidelity
@@ -17,7 +17,7 @@ QualitySettings:
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
-    shadowmaskMode: 1
+    shadowmaskMode: 0
     skinWeights: 255
     globalTextureMipmapLimit: 0
     textureMipmapLimitSettings: []
@@ -47,8 +47,7 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 11400000, guid: 36dd385e759c96147b6463dcd1149c11,
-      type: 2}
+    customRenderPipeline: {fileID: 11400000, guid: 1d33e3c21ded343bea2a409b30479409, type: 2}
     terrainQualityOverrides: 0
     terrainPixelError: 1
     terrainDetailDensityScale: 1
@@ -100,8 +99,7 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 11400000, guid: 3e2e6bfc59709614ab90c0cd7d755e48,
-      type: 2}
+    customRenderPipeline: {fileID: 11400000, guid: 84e67e048b3f14a25bc46e66e4b5f102, type: 2}
     terrainQualityOverrides: 0
     terrainPixelError: 1
     terrainDetailDensityScale: 1
@@ -153,8 +151,7 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 11400000, guid: 168a2336534e4e043b2a210b6f8d379a,
-      type: 2}
+    customRenderPipeline: {fileID: 11400000, guid: f80659acb523442e3a1bedaa71eb5cb8, type: 2}
     terrainQualityOverrides: 0
     terrainPixelError: 1
     terrainDetailDensityScale: 1
