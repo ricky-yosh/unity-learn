@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.LowLevelPhysics;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,9 +6,10 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnim;
     public float jumpForce = 15;
     public float gravityModifier = 1.5f;
+    public ParticleSystem explosionParticle;
+    public ParticleSystem dirtParticle;
     public bool isOnGround = true;
     public bool gameOver = false;
-    public ParticleSystem explosionParticle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,14 +26,16 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
             playerAnim.SetTrigger("Jump_trig");
+            dirtParticle.Stop();
         }
     }
 
-    public void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         isOnGround = true;
         if (collision.gameObject.CompareTag("Ground"))
         {
+            dirtParticle.Play();
             isOnGround = true;
         }
         else if (collision.gameObject.CompareTag("Obstacle"))
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
             explosionParticle.Play();
+            dirtParticle.Stop();
         }
     }
 }
