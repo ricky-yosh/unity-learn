@@ -260,6 +260,7 @@ MonoBehaviour:
   jumpForce: 15
   gravityModifier: 1.5
   isOnGround: 1
+  gameOver: 0
 --- !u!65 &328204305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -545,7 +546,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: c14bb5ce28dbb7442a2f79d8b6a061ce, type: 3}
       propertyPath: m_Name
-      value: SimplePeople_Man_Business_Brown
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c14bb5ce28dbb7442a2f79d8b6a061ce, type: 3}
       propertyPath: m_LocalPosition.x
