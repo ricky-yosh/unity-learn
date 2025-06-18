@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public float gravityModifier = 1.5f;
     public ParticleSystem explosionParticle;
     public ParticleSystem dirtParticle;
+    public AudioClip jumpSound;
+    public AudioClip crashSound;
     public bool isOnGround = true;
     public bool gameOver = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

@@ -261,6 +261,8 @@ MonoBehaviour:
   gravityModifier: 2
   explosionParticle: {fileID: 1763950614}
   dirtParticle: {fileID: 547960483}
+  jumpSound: {fileID: 8300000, guid: 113ee460fadc340e4957a7404a9fbb27, type: 3}
+  crashSound: {fileID: 8300000, guid: 913d6445ee8cc4152a9c18da590ee203, type: 3}
   isOnGround: 1
   gameOver: 0
 --- !u!65 &328204305
