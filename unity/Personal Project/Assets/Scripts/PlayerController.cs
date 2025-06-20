@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 20f;
+    private float speed = 40f;
     private Rigidbody playerRb;
     private float horizontalInput;
     private float verticalInput;
@@ -18,6 +18,21 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        movePlayer();
+    }
+
+    private void movePlayer()
+    {
+        constrainPlayer();
+
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
+        Vector3 move = transform.right * horizontalInput + transform.forward * verticalInput;
+        transform.Translate(move * speed * Time.deltaTime);
+    }
+
+    private void constrainPlayer()
     {
         if (transform.position.x < -xBounds)
         {
@@ -35,10 +50,5 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, zBoundsBottom);
         }
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
-        Vector3 move = transform.right * horizontalInput + transform.forward * verticalInput;
-        transform.Translate(move * speed * Time.deltaTime);
     }
-
 }
