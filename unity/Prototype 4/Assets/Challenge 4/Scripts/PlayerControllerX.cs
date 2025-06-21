@@ -38,6 +38,7 @@ public class PlayerControllerX : MonoBehaviour
         {
             Destroy(other.gameObject);
             hasPowerup = true;
+            StartCoroutine(PowerupCooldown());
             powerupIndicator.SetActive(true);
         }
     }
