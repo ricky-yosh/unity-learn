@@ -176,10 +176,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Score:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 31706cb8c8e1e4d99bb4d0a39c952ca2, type: 2}
+  m_sharedMaterial: {fileID: 21066439983934862, guid: 31706cb8c8e1e4d99bb4d0a39c952ca2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -203,8 +203,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 25.17
+  m_fontSizeBase: 25.17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -996,6 +996,7 @@ MonoBehaviour:
   - {fileID: 8812703336392795367, guid: 2423b068389eb410f9d4584276b802da, type: 3}
   - {fileID: 493182138030554023, guid: 9070e470b87c2478590a0efa2816566c, type: 3}
   - {fileID: 5181716484068380356, guid: bcf90aa3a2ed14743aa1b5403ff7a187, type: 3}
+  scoreText: {fileID: 55729633}
 --- !u!4 &1993334080
 Transform:
   m_ObjectHideFlags: 0
