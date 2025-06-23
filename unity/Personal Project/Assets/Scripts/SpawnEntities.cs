@@ -22,10 +22,9 @@ public class SpawnEntities : MonoBehaviour
     {
         int randomIndex = Random.Range(0, entities.Length);
         GameObject entity = entities[randomIndex];
-        float objectHeight = entity.GetComponent<Renderer>().bounds.size.y / 2;
 
         float randomSpawnX = Random.Range(-spawnRangeX, spawnRangeX);
-        Vector3 spawnPoint = new Vector3(randomSpawnX, objectHeight, spawnZ);
+        Vector3 spawnPoint = new Vector3(randomSpawnX, 0, spawnZ);
         Instantiate(entity, spawnPoint, transform.rotation);
     }
 }
