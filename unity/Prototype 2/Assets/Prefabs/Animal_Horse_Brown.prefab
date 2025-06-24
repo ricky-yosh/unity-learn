@@ -330,9 +330,9 @@ GameObject:
   - component: {fileID: 5194089137022728733}
   - component: {fileID: 8492787601157691363}
   - component: {fileID: 8595411159077200014}
-  - component: {fileID: 8633586784854356536}
   - component: {fileID: -8359837603872871623}
-  - component: {fileID: -8855324424904016956}
+  - component: {fileID: 2101676824435544615}
+  - component: {fileID: 2009496330647622540}
   m_Layer: 0
   m_Name: Animal_Horse_Brown
   m_TagString: Untagged
@@ -396,18 +396,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25.9
---- !u!114 &8633586784854356536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482466096003294725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 030df7db13323438084514f4eb00e588, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &-8359837603872871623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -429,7 +417,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 11.27, y: 36.713142, z: 43.4981}
   m_Center: {x: 0, y: 18.254333, z: 4.6275725}
---- !u!114 &-8855324424904016956
+--- !u!114 &2101676824435544615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -438,7 +426,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1482466096003294725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e44759fe08e0464a95eecfe28fef01f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c52ee72091692143869a36cdefe1fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2009496330647622540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482466096003294725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e62e9a8a22fac478a927ce940e28f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1588604668273781978
